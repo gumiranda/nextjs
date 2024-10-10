@@ -11,7 +11,7 @@ export const SigninForm = () => {
   const [passwordField, setPasswordField] = useState("");
 
   const handleEnterButton = () => {
-    router.replace('/home');
+    router.replace("/home");
   };
 
   return (
@@ -19,20 +19,19 @@ export const SigninForm = () => {
       <Input
         placeholder="Digite seu e-mail"
         value={emailFiel}
-        onChange={t => setEmailField(t)}
-        // filled 
+        onChange={(t) => setEmailField(t)}
+        // filled
         // icon={faHeart}
       />
 
       <Input
         placeholder="Digite sua senha"
         value={passwordField}
-        onChange={t => setPasswordField(t)}
+        onChange={(t) => setPasswordField(t)}
         password
       />
 
-
-        <Button label="Entrar" onClick={handleEnterButton} size={1}/>
+      <Button label="Entrar" onClick={handleEnterButton} size={1} />
 
       {/* <button onClick={handleEnterButton}> Entrar</button> */}
     </>

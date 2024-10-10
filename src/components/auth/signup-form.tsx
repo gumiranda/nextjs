@@ -12,37 +12,35 @@ export const SignUpForm = () => {
   const [passwordField, setPasswordField] = useState("");
 
   const handleEnterButton = () => {
-    router.replace('/home');
+    router.replace("/home");
   };
 
   return (
     <>
-
-<Input
+      <Input
         placeholder="Digite seu nome"
-        value={emailFiel}
-        onChange={t => setNameField(t)}
-        // filled 
+        value={nameField}
+        onChange={(t) => setNameField(t)}
+        // filled
         // icon={faHeart}
       />
 
       <Input
         placeholder="Digite seu e-mail"
         value={emailFiel}
-        onChange={t => setEmailField(t)}
-        // filled 
+        onChange={(t) => setEmailField(t)}
+        // filled
         // icon={faHeart}
       />
 
       <Input
         placeholder="Digite sua senha"
         value={passwordField}
-        onChange={t => setPasswordField(t)}
+        onChange={(t) => setPasswordField(t)}
         password
       />
 
-
-        <Button label="Criar conta" onClick={handleEnterButton} size={1}/>
+      <Button label="Criar conta" onClick={handleEnterButton} size={1} />
 
       {/* <button onClick={handleEnterButton}> Entrar</button> */}
     </>
