@@ -1,4 +1,5 @@
 import { NavItem } from "@/components/nav/nav-item";
+import { NavLogout } from "@/components/nav/nav-logout";
 import { Logo } from "@/components/ui/logo";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +22,9 @@ export default function Layout({ children }: Props) {
             <NavItem label="Meu perfil" icon={faUser} href="/profile" />
           </nav>
         </div>
-        <div></div>
+        <div className="mb-6 flex flex-col gap-4">
+          <NavLogout />
+        </div>
       </section>
       <section className="flex-1 max-w-lg">{children}</section>
       <aside
