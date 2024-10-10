@@ -21,16 +21,12 @@ export const SignUpForm = () => {
         placeholder="Digite seu nome"
         value={nameField}
         onChange={(t) => setNameField(t)}
-        // filled
-        // icon={faHeart}
       />
 
       <Input
         placeholder="Digite seu e-mail"
         value={emailFiel}
         onChange={(t) => setEmailField(t)}
-        // filled
-        // icon={faHeart}
       />
 
       <Input
@@ -41,8 +37,6 @@ export const SignUpForm = () => {
       />
 
       <Button label="Criar conta" onClick={handleEnterButton} size={1} />
-
-      {/* <button onClick={handleEnterButton}> Entrar</button> */}
     </>
   );
 };

@@ -3,16 +3,16 @@
 import { IconDefinition } from "@fortawesome/free-regular-svg-icons";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useState, type InputHTMLAttributes } from "react";
 
-type Props = {
+interface Props {
   placeholder: string;
   password?: boolean;
   filled?: boolean;
   icon?: IconDefinition;
   value?: string;
   onChange?: (newValue: string) => void;
-};
+}
 
 export const Input = ({
   placeholder,
@@ -21,13 +21,13 @@ export const Input = ({
   filled,
   value,
   onChange,
-}: Props) => {
+}: Props & Omit<InputHTMLAttributes<HTMLInputElement>, "onChange">) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div
       className={`has-[:focus]:border-white flex 
-        flex-items items-center h-14 rounded-3xl border-2 border-gray-700
+          items-center h-14 rounded-3xl border-2 border-gray-700
          ${filled && "bg-gray-700"}`}
     >
       {icon && (
