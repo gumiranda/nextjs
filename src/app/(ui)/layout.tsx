@@ -1,3 +1,8 @@
+import { NavItem } from "@/components/nav/nav-item";
+import { Logo } from "@/components/ui/logo";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+
 type Props = {
   children: React.ReactNode;
 };
@@ -6,10 +11,17 @@ export default function Layout({ children }: Props) {
   return (
     <main className="min-h-screen flex justify-center mx-auto max-w-7xl">
       <section
-        className="hidden lg:flex flex-col sticky top-0 h-screen w-72
+        className="flex lg:flex flex-col sticky top-0 h-screen w-72
       px-3 border-r-2 border-gray-900"
       >
-        ESQUERDA
+        <div className="flex-1 mt-6">
+          <Logo size={24} />
+          <nav className="mt-11">
+            <NavItem label="Página inicial" icon={faHouse} href="/home" />
+            <NavItem label="Meu perfil" icon={faUser} href="/profile" />
+          </nav>
+        </div>
+        <div></div>
       </section>
       <section className="flex-1 max-w-lg">{children}</section>
       <aside
