@@ -20,8 +20,6 @@ export const SigninForm = () => {
         placeholder="Digite seu e-mail"
         value={emailFiel}
         onChange={(t) => setEmailField(t)}
-        // filled
-        // icon={faHeart}
       />
 
       <Input
@@ -32,8 +30,6 @@ export const SigninForm = () => {
       />
 
       <Button label="Entrar" onClick={handleEnterButton} size={1} />
-
-      {/* <button onClick={handleEnterButton}> Entrar</button> */}
     </>
   );
 };
