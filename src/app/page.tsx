@@ -1,7 +1,9 @@
-export default function Home() {
+export default function Page() {
   return (
     <div>
-      <h1>olá devdoido</h1>
+      <h1>
+        ...
+      </h1>
     </div>
-  );
+  )
 }
