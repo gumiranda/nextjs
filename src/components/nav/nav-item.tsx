@@ -13,6 +13,9 @@ type Props = {
   active?: boolean;
 };
 
+// Memoized FontAwesomeIcon component
+const MemoizedFontAwesomeIcon = memo(FontAwesomeIcon);
+
 export const NavItem = memo(({ label, icon, href, active }: Props) => {
   const isMe = usePathname() === href;
 
@@ -26,7 +29,7 @@ export const NavItem = memo(({ label, icon, href, active }: Props) => {
         active || isMe ? "opacity-100" : "opacity-70"
       } hover:opacity-100`}
     >
-      <FontAwesomeIcon icon={memoizedIcon} className="size-6" />
+      <MemoizedFontAwesomeIcon icon={memoizedIcon} className="size-6" />
       <div className="text-lg">{label}</div>
     </Link>
   );

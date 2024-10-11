@@ -1,9 +1,14 @@
 "use client";
 
+import React, {
+  useState,
+  useCallback,
+  memo,
+  type InputHTMLAttributes,
+} from "react";
 import { IconDefinition } from "@fortawesome/free-regular-svg-icons";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useCallback, type InputHTMLAttributes } from "react";
 
 interface Props {
   placeholder: string;
@@ -14,6 +19,9 @@ interface Props {
   onChange?: (newValue: string) => void;
   onEnter?: () => void;
 }
+
+// Wrap FontAwesomeIcon with React.memo
+const MemoizedFontAwesomeIcon = memo(FontAwesomeIcon);
 
 export const Input = ({
   placeholder,
@@ -38,6 +46,7 @@ export const Input = ({
     },
     [onChange],
   );
+
   const handleKeyUp = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.code.toLowerCase() === "enter" && onEnter) {
@@ -54,7 +63,10 @@ export const Input = ({
          ${filled && "bg-gray-700"}`}
     >
       {icon && (
-        <FontAwesomeIcon icon={icon} className="ml-4 size-6 text-gray-500" />
+        <MemoizedFontAwesomeIcon
+          icon={icon}
+          className="ml-4 size-6 text-gray-500"
+        />
       )}
 
       <input
@@ -66,7 +78,7 @@ export const Input = ({
         onKeyUp={handleKeyUp}
       />
       {password && (
-        <FontAwesomeIcon
+        <MemoizedFontAwesomeIcon
           onClick={handleTogglePassword}
           icon={showPassword ? faEye : faEyeSlash}
           className="cursor-pointer mr-4 text-gray-500"

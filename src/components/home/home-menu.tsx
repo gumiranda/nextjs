@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Logo } from "../ui/logo";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { SearchInput } from "../ui/search-input";
 
 type Props = {
   closeAction: () => void;
@@ -17,6 +18,9 @@ export const HomeMenu = ({ closeAction }: Props) => {
         >
           <FontAwesomeIcon icon={faXmark} className="size-6" />
         </div>
+      </div>
+      <div className="my-6">
+        <SearchInput />
       </div>
     </div>
   );
