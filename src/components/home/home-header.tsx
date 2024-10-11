@@ -1,9 +1,12 @@
 "use client";
+import React, { useState } from "react"; // Import React.memo
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Logo } from "../ui/logo";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
 import { HomeMenu } from "./home-menu";
+
+// Memoize the FontAwesomeIcon component
+const MemoizedFontAwesomeIcon = React.memo(FontAwesomeIcon);
 
 export const HomeHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -19,7 +22,7 @@ export const HomeHeader = () => {
           setShowMenu(true);
         }}
       >
-        <FontAwesomeIcon icon={faBars} className="size-6" />
+        <MemoizedFontAwesomeIcon icon={faBars} className="size-6" />
       </div>
       {showMenu && <HomeMenu closeAction={() => setShowMenu(false)} />}
     </header>

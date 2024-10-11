@@ -1,9 +1,10 @@
+/* eslint-disable react/display-name */
 "use client";
 import type { IconDefinition } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useMemo } from "react"; // Import useMemo
+import { useMemo, memo } from "react"; // Import useMemo
 
 type Props = {
   label: string;
@@ -12,7 +13,7 @@ type Props = {
   active?: boolean;
 };
 
-export const NavItem = ({ label, icon, href, active }: Props) => {
+export const NavItem = memo(({ label, icon, href, active }: Props) => {
   const isMe = usePathname() === href;
 
   // Memoize the icon prop
@@ -29,4 +30,4 @@ export const NavItem = ({ label, icon, href, active }: Props) => {
       <div className="text-lg">{label}</div>
     </Link>
   );
-};
+});
