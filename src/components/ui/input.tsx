@@ -12,6 +12,7 @@ interface Props {
   icon?: IconDefinition;
   value?: string;
   onChange?: (newValue: string) => void;
+  onEnter?: () => void;
 }
 
 export const Input = ({
@@ -21,6 +22,7 @@ export const Input = ({
   filled,
   value,
   onChange,
+  onEnter,
 }: Props & Omit<InputHTMLAttributes<HTMLInputElement>, "onChange">) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -35,6 +37,14 @@ export const Input = ({
       return onChange && onChange(e.target.value);
     },
     [onChange],
+  );
+  const handleKeyUp = useCallback(
+    (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (event.code.toLowerCase() === "enter" && onEnter) {
+        onEnter();
+      }
+    },
+    [onEnter],
   );
 
   return (
@@ -53,6 +63,7 @@ export const Input = ({
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
+        onKeyUp={handleKeyUp}
       />
       {password && (
         <FontAwesomeIcon
