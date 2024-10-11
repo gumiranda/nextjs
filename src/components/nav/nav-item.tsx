@@ -3,14 +3,21 @@ import type { IconDefinition } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useMemo } from "react"; // Import useMemo
+
 type Props = {
   label: string;
   icon: IconDefinition;
   href: string;
   active?: boolean;
 };
+
 export const NavItem = ({ label, icon, href, active }: Props) => {
   const isMe = usePathname() === href;
+
+  // Memoize the icon prop
+  const memoizedIcon = useMemo(() => icon, [icon]);
+
   return (
     <Link
       href={href}
@@ -18,7 +25,7 @@ export const NavItem = ({ label, icon, href, active }: Props) => {
         active || isMe ? "opacity-100" : "opacity-70"
       } hover:opacity-100`}
     >
-      <FontAwesomeIcon icon={icon} className="size-6" />
+      <FontAwesomeIcon icon={memoizedIcon} className="size-6" />
       <div className="text-lg">{label}</div>
     </Link>
   );

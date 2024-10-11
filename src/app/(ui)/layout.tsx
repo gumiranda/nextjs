@@ -3,6 +3,7 @@ import { NavLogout } from "@/components/nav/nav-logout";
 import { NavMyProfile } from "@/components/nav/nav-myprofile";
 import { Logo } from "@/components/ui/logo";
 import { SearchInput } from "@/components/ui/search-input";
+import { TrendingArea } from "@/components/ui/trending-area";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
@@ -35,6 +36,7 @@ export default function Layout({ children }: Props) {
        sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-900"
       >
         <SearchInput hideOnSearch />
+        <TrendingArea />
       </aside>
     </main>
   );
