@@ -15,8 +15,9 @@ const MemoizedFontAwesomeIcon = memo(FontAwesomeIcon);
 
 type Props = {
   tweet: Tweet;
+  hideComments?: boolean;
 };
-export const TweetItem = ({ tweet }: Props) => {
+export const TweetItem = ({ tweet, hideComments = false }: Props) => {
   const [liked, setLiked] = useState(false);
   const handleLikeButton = () => {
     setLiked((prev) => !prev);
@@ -52,14 +53,20 @@ export const TweetItem = ({ tweet }: Props) => {
           </div>
         )}
         <div className="flex mt-6 text-gray-500">
-          <div className="flex-1">
-            <Link href={`/tweet/${tweet.id}`}>
-              <div className="inline-flex items-center gap-2 cursor-pointer">
-                <MemoizedFontAwesomeIcon icon={faComment} className="size-6" />
-                <div className="text-lg">{tweet.commentCount}</div>
-              </div>
-            </Link>
-          </div>
+          {!hideComments && (
+            <div className="flex-1">
+              <Link href={`/tweet/${tweet.id}`}>
+                <div className="inline-flex items-center gap-2 cursor-pointer">
+                  <MemoizedFontAwesomeIcon
+                    icon={faComment}
+                    className="size-6"
+                  />
+                  <div className="text-lg">{tweet.commentCount}</div>
+                </div>
+              </Link>
+            </div>
+          )}
+
           <div className="flex-1">
             <div className="inline-flex items-center gap-2 cursor-pointer">
               <MemoizedFontAwesomeIcon icon={faRetweet} className="size-6" />
