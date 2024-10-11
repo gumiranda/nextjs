@@ -9,7 +9,10 @@ const MemoizedFontAwesomeIcon = memo(FontAwesomeIcon);
 
 export const TweetPost: React.FC = () => {
   const handleImageUpload = () => {};
-  const handlePostClick = () => {};
+  const handlePostClick = () => {
+    const content = document.querySelector("[role=textbox]")?.textContent;
+    console.log("Post clicked", content);
+  };
   return (
     <div className="flex gap-6 px-8 py-6 border-b-2 border-gray-800">
       <div>
