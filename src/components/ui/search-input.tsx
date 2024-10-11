@@ -5,8 +5,9 @@ import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 type Props = {
   defaultValue?: string;
+  hideOnSearch?: boolean;
 };
-export const SearchInput = ({ defaultValue }: Props) => {
+export const SearchInput = ({ defaultValue, hideOnSearch }: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   const [searchInput, setSearchInput] = useState(defaultValue ?? "");
@@ -15,7 +16,7 @@ export const SearchInput = ({ defaultValue }: Props) => {
       router.push(`/search?q=${encodeURIComponent(searchInput)}`);
     }
   };
-  if (pathname === "/search") {
+  if (hideOnSearch && pathname === "/search") {
     return null;
   }
   return (

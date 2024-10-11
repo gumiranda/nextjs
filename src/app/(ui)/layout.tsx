@@ -34,7 +34,7 @@ export default function Layout({ children }: Props) {
         className="hidden lg:flex flex-col gap-6
        sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-900"
       >
-        <SearchInput />
+        <SearchInput hideOnSearch />
       </aside>
     </main>
   );
