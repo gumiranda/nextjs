@@ -11,7 +11,7 @@ type Props = {
 
 export const HomeMenu = ({ closeAction }: Props) => {
   return (
-    <div className="fixed inset-0 p-6 bg-black">
+    <div className="lg:hidden fixed inset-0 p-6 bg-black">
       <div className="flex justify-between items-center">
         <Logo size={32} />
         <div

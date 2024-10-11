@@ -1,9 +1,11 @@
+/* eslint-disable react/display-name */
 "use client";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/navigation";
+import { memo } from "react";
 
-export const NavLogout = () => {
+export const NavLogout = memo(() => {
   const router = useRouter();
   const handleClick = () => {
     router.replace("/signin");
@@ -18,4 +20,4 @@ export const NavLogout = () => {
       <div className="text-lg">Sair</div>
     </div>
   );
-};
+});
