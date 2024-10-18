@@ -11,7 +11,7 @@ export const SigninForm = () => {
   const [passwordField, setPasswordField] = useState("");
 
   const handleEnterButton = () => {
-    router.replace("/home");
+    router.replace("/twitter/home");
   };
 
   return (
