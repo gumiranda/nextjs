@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { ProfileFeed } from "@/components/profile/profile-feed";
-import { Button } from "@/components/ui/button";
-import { GeneralHeader } from "@/components/ui/general-header";
-import { Input } from "@/components/ui/input";
-import { TextArea } from "@/components/ui/textarea";
+import { Button } from "@/components/twitter/ui/button";
+import { GeneralHeader } from "@/components/twitter/ui/general-header";
+import { Input } from "@/components/twitter/ui/input";
+import { TextArea } from "@/components/twitter/ui/textarea";
 import { user } from "@/data/user";
 import { faCamera, faLink, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -1,4 +1,4 @@
-import { GeneralHeader } from "@/components/ui/general-header";
+import { GeneralHeader } from "@/components/twitter/ui/general-header";
 
 import { TweetItem } from "@/components/tweet/tweet-item";
 import { tweet } from "@/data/tweet";

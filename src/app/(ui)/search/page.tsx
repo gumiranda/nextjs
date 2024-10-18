@@ -1,6 +1,6 @@
-import { GeneralHeader } from "@/components/ui/general-header";
+import { GeneralHeader } from "@/components/twitter/ui/general-header";
 import { redirect } from "next/navigation";
-import { SearchInput } from "@/components/ui/search-input";
+import { SearchInput } from "@/components/twitter/ui/search-input";
 import { TweetItem } from "@/components/tweet/tweet-item";
 import { tweet } from "@/data/tweet";
 

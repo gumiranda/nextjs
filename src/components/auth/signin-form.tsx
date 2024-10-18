@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
+import { Button } from "../twitter/ui/button";
+import { Input } from "../twitter/ui/input";
 
 export const SigninForm = () => {
   const router = useRouter();

@@ -1,6 +1,6 @@
 import { ProfileFeed } from "@/components/profile/profile-feed";
-import { Button } from "@/components/ui/button";
-import { GeneralHeader } from "@/components/ui/general-header";
+import { Button } from "@/components/twitter/ui/button";
+import { GeneralHeader } from "@/components/twitter/ui/general-header";
 import { user } from "@/data/user";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

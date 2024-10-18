@@ -1,10 +1,10 @@
 import { NavItem } from "@/components/nav/nav-item";
 import { NavLogout } from "@/components/nav/nav-logout";
 import { NavMyProfile } from "@/components/nav/nav-myprofile";
-import { Logo } from "@/components/ui/logo";
-import { RecommendationArea } from "@/components/ui/recommendation-area";
-import { SearchInput } from "@/components/ui/search-input";
-import { TrendingArea } from "@/components/ui/trending-area";
+import { Logo } from "@/components/twitter/ui/logo";
+import { RecommendationArea } from "@/components/twitter/ui/recommendation-area";
+import { SearchInput } from "@/components/twitter/ui/search-input";
+import { TrendingArea } from "@/components/twitter/ui/trending-area";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
