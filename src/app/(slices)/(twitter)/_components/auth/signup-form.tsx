@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Button } from "../../../../shared/ui/atoms/twitter/button";
-import { Input } from "../../../../shared/ui/atoms/twitter/input";
+import { Button } from "@/shared/ui/atoms/twitter/button";
+import { Input } from "@/shared/ui/atoms/twitter/input";
 
 export const SignUpForm = () => {
   const router = useRouter();

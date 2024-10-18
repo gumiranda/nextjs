@@ -4,7 +4,7 @@ import { user } from "@/app/(slices)/(twitter)/_data/user";
 import { faImage } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { memo } from "react";
-import { Button } from "../../../../shared/ui/atoms/twitter/button";
+import { Button } from "@/shared/ui/atoms/twitter/button";
 const MemoizedFontAwesomeIcon = memo(FontAwesomeIcon);
 
 export const TweetPost: React.FC = () => {

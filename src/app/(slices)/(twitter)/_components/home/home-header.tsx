@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, memo } from "react"; // Import React.memo
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Logo } from "../../../../shared/ui/atoms/twitter/logo";
+import { Logo } from "@/shared/ui/atoms/twitter/logo";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { HomeMenu } from "./home-menu";
 
