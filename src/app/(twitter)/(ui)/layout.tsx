@@ -1,10 +1,10 @@
 import { NavItem } from "@/app/(twitter)/_components/nav/nav-item";
 import { NavLogout } from "@/app/(twitter)/_components/nav/nav-logout";
 import { NavMyProfile } from "@/app/(twitter)/_components/nav/nav-myprofile";
-import { Logo } from "@/shared/ui/atoms/twitter-clone/logo";
-import { RecommendationArea } from "@/shared/ui/atoms/twitter-clone/recommendation-area";
-import { SearchInput } from "@/shared/ui/atoms/twitter-clone/search-input";
-import { TrendingArea } from "@/shared/ui/atoms/twitter-clone/trending-area";
+import { Logo } from "@/shared/ui/atoms/twitter/logo";
+import { RecommendationArea } from "@/shared/ui/organisms/twitter/recommendation-area";
+import { SearchInput } from "@/shared/ui/molecules/twitter/search-input";
+import { TrendingArea } from "@/shared/ui/molecules/twitter/trending-area";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 

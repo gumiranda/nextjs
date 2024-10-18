@@ -1,4 +1,4 @@
-import { GeneralHeader } from "@/shared/ui/atoms/twitter-clone/general-header";
+import { GeneralHeader } from "@/shared/ui/atoms/twitter/general-header";
 
 import { TweetItem } from "@/app/(twitter)/_components/tweet/tweet-item";
 import { tweet } from "@/app/(twitter)/_data/tweet";

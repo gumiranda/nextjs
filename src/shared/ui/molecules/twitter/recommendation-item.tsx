@@ -1,7 +1,7 @@
 "use client";
 import type { User } from "@/app/(twitter)/_types/user";
 import Link from "next/link";
-import { Button } from "@/shared/ui/atoms/twitter-clone/button";
+import { Button } from "@/shared/ui/atoms/twitter/button";
 import { useState } from "react";
 
 type Props = {

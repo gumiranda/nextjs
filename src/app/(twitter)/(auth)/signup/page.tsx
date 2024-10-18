@@ -1,5 +1,5 @@
 import { SignUpForm } from "@/app/(twitter)/_components/auth/signup-form";
-import { Logo } from "@/shared/ui/atoms/twitter-clone/logo";
+import { Logo } from "@/shared/ui/atoms/twitter/logo";
 import Link from "next/link";
 
 export default function Page() {

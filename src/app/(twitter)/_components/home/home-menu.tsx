@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Logo } from "../../../../shared/ui/atoms/twitter-clone/logo";
+import { Logo } from "../../../../shared/ui/atoms/twitter/logo";
 import { faHouse, faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { SearchInput } from "../../../../shared/ui/atoms/twitter-clone/search-input";
+import { SearchInput } from "../../../../shared/ui/molecules/twitter/search-input";
 import { NavItem } from "../nav/nav-item";
 import { NavLogout } from "../nav/nav-logout";
 

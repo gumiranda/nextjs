@@ -1,5 +1,5 @@
 import { SigninForm } from "@/app/(twitter)/_components/auth/signin-form";
-import { Logo } from "@/shared/ui/atoms/twitter-clone/logo";
+import { Logo } from "@/shared/ui/atoms/twitter/logo";
 import Link from "next/link";
 
 export default function Page() {

@@ -1,6 +1,6 @@
 import { ProfileFeed } from "@/app/(twitter)/_components/profile/profile-feed";
-import { Button } from "@/shared/ui/atoms/twitter-clone/button";
-import { GeneralHeader } from "@/shared/ui/atoms/twitter-clone/general-header";
+import { Button } from "@/shared/ui/atoms/twitter/button";
+import { GeneralHeader } from "@/shared/ui/atoms/twitter/general-header";
 import { user } from "@/app/(twitter)/_data/user";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

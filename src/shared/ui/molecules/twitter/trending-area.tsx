@@ -1,4 +1,7 @@
-import { TrendingItem, TrendingItemSkeleton } from "./trending-item";
+import {
+  TrendingItem,
+  TrendingItemSkeleton,
+} from "@/shared/ui/atoms/twitter/trending-item";
 
 export const TrendingArea = () => {
   return (

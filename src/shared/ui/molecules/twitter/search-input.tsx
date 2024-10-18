@@ -1,6 +1,6 @@
 "use client";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { Input } from "./input";
+import { Input } from "@/shared/ui/atoms/twitter/input";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 type Props = {

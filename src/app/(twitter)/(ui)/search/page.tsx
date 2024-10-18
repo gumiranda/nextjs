@@ -1,6 +1,6 @@
-import { GeneralHeader } from "@/shared/ui/atoms/twitter-clone/general-header";
+import { GeneralHeader } from "@/shared/ui/atoms/twitter/general-header";
 import { redirect } from "next/navigation";
-import { SearchInput } from "@/shared/ui/atoms/twitter-clone/search-input";
+import { SearchInput } from "@/shared/ui/molecules/twitter/search-input";
 import { TweetItem } from "@/app/(twitter)/_components/tweet/tweet-item";
 import { tweet } from "@/app/(twitter)/_data/tweet";
 

@@ -2,7 +2,7 @@ import { user } from "@/app/(twitter)/_data/user";
 import {
   RecommendationItem,
   RecommendationItemSkeleton,
-} from "./recommendation-item";
+} from "@/shared/ui/molecules/twitter/recommendation-item";
 
 export const RecommendationArea = () => {
   return (
