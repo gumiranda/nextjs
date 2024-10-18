@@ -1,4 +1,4 @@
-import { user } from "@/app/(twitter)/_data/user";
+import { user } from "@/app/(slices)/(twitter)/_data/user";
 import {
   RecommendationItem,
   RecommendationItemSkeleton,
