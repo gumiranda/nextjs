@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 import MillionLint from "@million/lint";
 
-const nextConfig = {};
+let nextConfig = {};
 
-export default MillionLint.next({ rsc: true })(nextConfig);
+if (process.env.NODE_ENV === "development") {
+  nextConfig = MillionLint.next({ rsc: true })(nextConfig);
+}
+
+export default nextConfig;
