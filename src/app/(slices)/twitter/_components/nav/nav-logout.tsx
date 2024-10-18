@@ -9,7 +9,7 @@ const MemoizedFontAwesomeIcon = memo(FontAwesomeIcon);
 export const NavLogout = memo(() => {
   const router = useRouter();
   const handleClick = () => {
-    router.replace("/signin");
+    router.replace("/twitter/signin");
   };
   return (
     <div
