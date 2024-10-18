@@ -7,7 +7,7 @@ type Props = {
 export const TrendingItem = ({ label, count }: Props) => {
   return (
     <Link
-      href={`/search?q=${encodeURIComponent(label)}`}
+      href={`/twitter/search?q=${encodeURIComponent(label)}`}
       className="group/item"
     >
       <div className="group-hover/item:underline font-bold">{label}</div>

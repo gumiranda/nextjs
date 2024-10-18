@@ -18,15 +18,10 @@ import {
 import { Button } from "@/shared/ui/atoms/shadcn/button";
 import SignInDialog from "./sign-in-dialog";
 type Props = {
-  handleLogoutClick: () => void;
   data: any;
   quickSearchOptions: any[];
 };
-const SidebarSheet = ({
-  handleLogoutClick,
-  data,
-  quickSearchOptions,
-}: Props) => {
+const SidebarSheet = ({ data, quickSearchOptions }: Props) => {
   return (
     <SheetContent className="overflow-y-auto">
       <SheetHeader>
@@ -67,14 +62,14 @@ const SidebarSheet = ({
       <div className="flex flex-col gap-2 border-b border-solid py-5">
         <SheetClose asChild>
           <Button className="justify-start gap-2" variant="ghost" asChild>
-            <Link href="/">
+            <Link href="/twitter/">
               <HomeIcon size={18} />
               Início
             </Link>
           </Button>
         </SheetClose>
         <Button className="justify-start gap-2" variant="ghost" asChild>
-          <Link href="/bookings">
+          <Link href="/twitter/bookings">
             <CalendarIcon size={18} />
             Agendamentos
           </Link>
@@ -85,7 +80,7 @@ const SidebarSheet = ({
         {quickSearchOptions?.map?.((option) => (
           <SheetClose key={option.title} asChild>
             <Button className="justify-start gap-2" variant="ghost" asChild>
-              <Link href={`/barbershops?service=${option.title}`}>
+              <Link href={`/twitter/barbershops?service=${option.title}`}>
                 <Image
                   alt={option.title}
                   src={option.imageUrl}
@@ -104,7 +99,7 @@ const SidebarSheet = ({
           <Button
             variant="ghost"
             className="justify-start gap-2"
-            onClick={handleLogoutClick}
+            onClick={() => {}}
           >
             <LogOutIcon size={18} />
             Sair da conta

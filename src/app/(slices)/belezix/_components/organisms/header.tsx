@@ -5,13 +5,13 @@ import { Card, CardContent } from "@/shared/ui/atoms/shadcn/card";
 import { Sheet, SheetTrigger } from "@/shared/ui/atoms/shadcn/sheet";
 import { Button } from "@/shared/ui/atoms/shadcn/button";
 import SidebarSheet from "../molecules/sidebar-sheet";
-import { user } from "@/app/(slices)/(twitter)/_data/user";
+import { user } from "@/app/(slices)/twitter/_data/user";
 
 const Header = () => {
   return (
     <Card>
       <CardContent className="flex flex-row items-center justify-between p-5">
-        <Link href="/">
+        <Link href="/twitter/">
           <Image alt="FSW Barber" src="/logo.png" height={18} width={120} />
         </Link>
 
@@ -22,12 +22,28 @@ const Header = () => {
             </Button>
           </SheetTrigger>
           <SidebarSheet
-            handleLogoutClick={() => {}}
             data={user}
             quickSearchOptions={[
-              { title: "Home", imageUrl: "https://via.placeholder.com/20" },
-              { title: "Calendar", imageUrl: "https://via.placeholder.com/20" },
-              { title: "Log Out", imageUrl: "https://via.placeholder.com/20" },
+              {
+                title: "Acabamento",
+                imageUrl: "/acabamento.svg",
+              },
+              {
+                title: "Cabelo",
+                imageUrl: "/cabelo.svg",
+              },
+              {
+                title: "Barba",
+                imageUrl: "/barba.svg",
+              },
+              {
+                title: "Massagem",
+                imageUrl: "/massagem.svg",
+              },
+              {
+                title: "Sobrancelha",
+                imageUrl: "/sobrancelha.svg",
+              },
             ]}
           />
         </Sheet>

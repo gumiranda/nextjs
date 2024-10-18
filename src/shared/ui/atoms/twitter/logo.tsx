@@ -7,7 +7,7 @@ type Props = {
 
 export const Logo = ({ size }: Props) => {
   return (
-    <Link href="/">
+    <Link href="/twitter/">
       <Image
         src={"/logo.png"}
         alt="Logo"

@@ -1,5 +1,5 @@
 "use client";
-import type { User } from "@/app/(slices)/(twitter)/_types/user";
+import type { User } from "@/app/(slices)/twitter/_types/user";
 import Link from "next/link";
 import { Button } from "@/shared/ui/atoms/twitter/button";
 import { useState } from "react";
@@ -15,12 +15,15 @@ export const RecommendationItem = ({ user }: Props) => {
   return (
     <div className="flex items-center">
       <div className="size-10 mr-2 rounded-full overflow-hidden">
-        <Link href={`/${user.slug}`} className="group/item">
+        <Link href={`/twitter/${user.slug}`} className="group/item">
           <img src={user.avatar} alt={user.name} className="size-full" />
         </Link>
       </div>
       <div className="flex-1 overflow-hidden">
-        <Link href={`/${user.slug}`} className="group/item block truncate">
+        <Link
+          href={`/twitter/${user.slug}`}
+          className="group/item block truncate"
+        >
           <div className="group-hover/item:underline font-bold">
             {user.name}
           </div>
