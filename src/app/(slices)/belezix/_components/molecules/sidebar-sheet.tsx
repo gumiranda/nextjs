@@ -62,14 +62,14 @@ const SidebarSheet = ({ data, quickSearchOptions }: Props) => {
       <div className="flex flex-col gap-2 border-b border-solid py-5">
         <SheetClose asChild>
           <Button className="justify-start gap-2" variant="ghost" asChild>
-            <Link href="/twitter/">
+            <Link href="/belezix/">
               <HomeIcon size={18} />
               Início
             </Link>
           </Button>
         </SheetClose>
         <Button className="justify-start gap-2" variant="ghost" asChild>
-          <Link href="/twitter/bookings">
+          <Link href="/belezix/bookings">
             <CalendarIcon size={18} />
             Agendamentos
           </Link>
@@ -80,7 +80,7 @@ const SidebarSheet = ({ data, quickSearchOptions }: Props) => {
         {quickSearchOptions?.map?.((option) => (
           <SheetClose key={option.title} asChild>
             <Button className="justify-start gap-2" variant="ghost" asChild>
-              <Link href={`/twitter/barbershops?service=${option.title}`}>
+              <Link href={`/belezix/barbershops?service=${option.title}`}>
                 <Image
                   alt={option.title}
                   src={option.imageUrl}
