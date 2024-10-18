@@ -1,4 +1,4 @@
-import { Logo } from "@/components/twitter/ui/logo";
+import { Logo } from "@/shared/ui/atoms/twitter-clone/logo";
 import { redirect } from "next/navigation";
 
 export default function Page() {
