@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const SubHeader = () => {
   return (
-    <div className="mx-1">
+    <div className="mx-1 justify-center flex flex-col">
       <HeadingHome />
       <div className="p-5 max-w-lg">
         <Search />
