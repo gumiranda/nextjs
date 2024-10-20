@@ -55,7 +55,7 @@ export const ScrollWrapper = ({ children, itemWidth }: ScrollWrapperProps) => {
       {showLeftArrow && (
         <div
           onClick={scrollLeft}
-          className="hidden md:block absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-black rounded-full p-2 cursor-pointer z-100"
+          className="hidden md:block absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-black rounded-full p-2 cursor-pointer z-50"
         >
           <ArrowLeft size={24} />
         </div>
@@ -71,7 +71,7 @@ export const ScrollWrapper = ({ children, itemWidth }: ScrollWrapperProps) => {
       {showRightArrow && (
         <div
           onClick={scrollRight}
-          className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-black rounded-full p-2 cursor-pointer z-100"
+          className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-black rounded-full p-2 cursor-pointer z-50"
         >
           <ArrowRight size={24} />
         </div>

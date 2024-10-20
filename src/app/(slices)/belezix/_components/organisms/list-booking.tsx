@@ -11,9 +11,9 @@ export const ListBooking = () => {
           </h2>
 
           {/* Usando o ScrollWrapper para a lista de agendamentos */}
-          <ScrollWrapper itemWidth={400}>
+          <ScrollWrapper itemWidth={342}>
             {confirmedBookings.map((booking) => (
-              <div key={booking.id} className="min-w-[400px]">
+              <div key={booking.id} className="min-w-[342px]">
                 <BookingItem booking={booking} />
               </div>
             ))}
