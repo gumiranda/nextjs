@@ -1,15 +1,18 @@
 "use client";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import BookingItem from "./booking-item";
 
 export const ListBooking = () => {
   const bookingsContainerRef = useRef<HTMLDivElement>(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(false);
+
   const scrollRight = () => {
     if (bookingsContainerRef.current) {
       bookingsContainerRef.current.scrollBy({
-        left: 400, // Quantidade de pixels para rolar à direita
-        behavior: "smooth", // Comportamento suave
+        left: 400, // Pixels to scroll to the right
+        behavior: "smooth", // Smooth scrolling
       });
     }
   };
@@ -17,14 +20,33 @@ export const ListBooking = () => {
   const scrollLeft = () => {
     if (bookingsContainerRef.current) {
       bookingsContainerRef.current.scrollBy({
-        left: -400, // Quantidade de pixels para rolar à esquerda
-        behavior: "smooth", // Comportamento suave
+        left: -400, // Pixels to scroll to the left
+        behavior: "smooth", // Smooth scrolling
       });
     }
   };
-  const showLeftArrow = bookingsContainerRef.current
-    ? bookingsContainerRef.current.scrollLeft > 0
-    : false;
+
+  const handleScroll = () => {
+    if (bookingsContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } =
+        bookingsContainerRef.current;
+      setShowLeftArrow(scrollLeft > 0);
+      setShowRightArrow(scrollLeft + clientWidth < scrollWidth);
+    }
+  };
+
+  useEffect(() => {
+    const container = bookingsContainerRef.current;
+
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+      handleScroll();
+      return () => {
+        container.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []);
+
   return (
     <>
       {confirmedBookings.length > 0 && (
@@ -33,17 +55,16 @@ export const ListBooking = () => {
             Agendamentos
           </h2>
 
-          {/* AGENDAMENTO */}
+          {/* Booking List */}
           <div className="relative">
             {showLeftArrow && (
-              <button
+              <div
                 onClick={scrollLeft}
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-black rounded-full p-2"
+                className="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-black rounded-full p-2 cursor-pointer"
               >
                 <ArrowLeft size={24} />
-              </button>
+              </div>
             )}
-            {/* Ícone de rolagem à esquerda */}
 
             <div
               ref={bookingsContainerRef}
@@ -56,13 +77,14 @@ export const ListBooking = () => {
               ))}
             </div>
 
-            {/* Ícone de rolagem à direita */}
-            <button
-              onClick={scrollRight}
-              className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-black rounded-full p-2"
-            >
-              <ArrowRight size={24} />
-            </button>
+            {showRightArrow && (
+              <div
+                onClick={scrollRight}
+                className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-black rounded-full p-2 cursor-pointer"
+              >
+                <ArrowRight size={24} />
+              </div>
+            )}
           </div>
         </div>
       )}
