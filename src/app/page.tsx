@@ -1,7 +1,9 @@
-export default function Home() {
+import { Logo } from "@/shared/ui/atoms/twitter/logo";
+
+export default function Page() {
   return (
-    <div>
-      <h1>olá devdoido</h1>
+    <div className="min-h-screen flex justify-center items-center">
+      <Logo size={80} />
     </div>
   );
 }
