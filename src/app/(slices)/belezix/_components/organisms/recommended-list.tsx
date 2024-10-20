@@ -3,7 +3,7 @@ import { ScrollWrapper } from "../molecules/scroll-wrapper";
 
 export const RecommendedList = () => {
   return (
-    <div className="flex flex-col lg:max-w-3xl">
+    <div className="flex flex-col lg:max-w-xl 2xl:max-w-4xl p-5">
       <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
         Recomendados
       </h2>

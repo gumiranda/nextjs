@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col xl:flex-row items-center xl:justify-around">
+      <div className="flex flex-col xl:flex-row xl:justify-around">
         <div className="w-full">
           <SubHeader />
           <ListBooking />
