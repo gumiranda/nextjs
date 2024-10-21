@@ -15,7 +15,8 @@ import {
 } from "@/shared/ui/molecules/shadcn/form";
 import { Input } from "@/shared/ui/atoms/shadcn/input";
 import { Button } from "@/shared/ui/atoms/shadcn/button";
-
+import NextForm from "next/form";
+import handleSearch from "../../_actions/handle-search";
 const formSchema = z.object({
   title: z.string().trim().min(1, {
     message: "Digite algo para buscar",
@@ -37,7 +38,11 @@ const Search = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="flex gap-2">
+      <NextForm
+        onSubmit={form.handleSubmit(handleSubmit)}
+        className="flex gap-2"
+        action={"belezix/owners"}
+      >
         <FormField
           control={form.control}
           name="title"
@@ -57,7 +62,7 @@ const Search = () => {
         <Button type="submit">
           <SearchIcon />
         </Button>
-      </form>
+      </NextForm>
     </Form>
   );
 };
