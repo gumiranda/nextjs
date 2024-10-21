@@ -3,7 +3,7 @@
 import { SearchIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import NextForm from "next/form";
+
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import {
@@ -15,7 +15,6 @@ import {
 } from "@/shared/ui/molecules/shadcn/form";
 import { Input } from "@/shared/ui/atoms/shadcn/input";
 import { Button } from "@/shared/ui/atoms/shadcn/button";
-import { handleSearch } from "../../_actions/handle-search";
 
 const formSchema = z.object({
   title: z.string().trim().min(1, {
@@ -38,11 +37,7 @@ const Search = () => {
 
   return (
     <Form {...form}>
-      <NextForm
-        onSubmit={form.handleSubmit(handleSubmit)}
-        className="flex gap-2"
-        action={handleSearch}
-      >
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="flex gap-2">
         <FormField
           control={form.control}
           name="title"
@@ -62,7 +57,7 @@ const Search = () => {
         <Button type="submit">
           <SearchIcon />
         </Button>
-      </NextForm>
+      </form>
     </Form>
   );
 };
