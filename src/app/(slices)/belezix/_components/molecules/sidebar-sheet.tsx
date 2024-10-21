@@ -80,7 +80,7 @@ const SidebarSheet = ({ data, quickSearchOptions }: Props) => {
         {quickSearchOptions?.map?.((option) => (
           <SheetClose key={option.title} asChild>
             <Button className="justify-start gap-2" variant="ghost" asChild>
-              <Link href={`/belezix/belezix/owners?service=${option.title}`}>
+              <Link href={`/belezix/owners?service=${option.title}`}>
                 <Image
                   alt={option.title}
                   src={option.imageUrl}
