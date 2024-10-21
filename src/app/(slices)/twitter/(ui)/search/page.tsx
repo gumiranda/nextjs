@@ -11,7 +11,7 @@ type Props = {
 };
 export default function Page({ searchParams }: Props) {
   if (!searchParams.q) {
-    redirect("/");
+    redirect("/twitter");
   }
 
   return (

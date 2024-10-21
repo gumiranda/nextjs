@@ -27,7 +27,7 @@ export const QuickSearch = () => {
           key={option.title}
           asChild
         >
-          <Link href={`/barbershops?service=${option.title}`}>
+          <Link href={`/belezix/owners?service=${option.title}`}>
             <Image
               src={option.imageUrl}
               width={16}
